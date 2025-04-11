@@ -3,9 +3,9 @@ import { PiUsersDuotone, PiMusicNoteDuotone } from "react-icons/pi";
 
 const DJProfileCard = ({ image, followerCount, mixesCount, onFollow }) => {
   return (
-    <div className="flex flex-col items-center w-24">
+    <div className="flex flex-col items-center w-24 group">
       <div
-        className="w-24 h-24 bg-cover bg-center rounded-full"
+        className="w-24 h-24 bg-cover bg-center rounded-full group-hover:border-1 group-hover:border-[#C91F4F]"
         style={{ backgroundImage: `url(${image})` }}
       ></div>
 

@@ -25,22 +25,22 @@ const HorizontalMixCardWithTime = ({
         </div>
       </div>
       <div className="p-2 flex flex-col flex-1 justify-center space-y-1">
-        <h3 className="text-sm">{title}</h3>
+        <h3 className="text-sm cursor-pointer">{title}</h3>
         <div className="flex space-x-2 items-center">
           <p className="text-white/25 text-xs">{author}</p>
           <span className="text-white/25 text-xs">&#8226;</span>
           <p className="text-white/20 text-xs">{publishedTime}</p>
         </div>
-        <div className="flex justify-between text-white/25 text-xs">
-          <div className="flex items-center gap-1">
+        <div className="flex justify-between text-white/25 text-xs font-light">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaComment size={10} />
             <span>{commentCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaPlay size={10} />
             <span>{playCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaHeart size={10} />
             <span>{likeCount}</span>
           </div>

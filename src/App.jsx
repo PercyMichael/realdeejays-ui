@@ -44,7 +44,7 @@ const App = () => {
 
         {/* dj profiles */}
         <div className="w-full p-10">
-          <h1 className="text-xl">Real DJs</h1>
+          <h1 className="text-xl">Top DJs</h1>
           <p className="text-sm mt-1 text-white/60">
             Discover and follow your favorite DJs.
           </p>
@@ -52,11 +52,11 @@ const App = () => {
             className="mt-4"
             dots={true}
             infinite={true}
-            speed={1000}
-            slidesToShow={4}
+            speed={500}
+            slidesToShow={5}
             slidesToScroll={4}
             autoplay={true}
-            autoplaySpeed={2000}
+            autoplaySpeed={3000}
           >
             {[
               {
@@ -102,8 +102,6 @@ const App = () => {
         </div>
         {/* end jd profiles */}
 
-        {/*  */}
-
         {/* content */}
         <div className="flex flex-col justify-start w-full p-10">
           {/* latest mixes */}
@@ -115,7 +113,7 @@ const App = () => {
             {[
               {
                 title: "BANG BANG 4",
-                description: "Some description",
+                djName: "DJ Bang Bang",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-67dd70350f2f8-2048x2048.jpg",
                 commentCount: 12,
@@ -124,7 +122,7 @@ const App = () => {
               },
               {
                 title: "Summer Vibes",
-                description: "Some description",
+                djName: "DJ Summer",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-comp-67e6718ddd20c.webp",
                 commentCount: 8,
@@ -133,7 +131,7 @@ const App = () => {
               },
               {
                 title: "Night Beats",
-                description: "Some description",
+                djName: "DJ Night",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/crush-reggae-mixtape-comp-67e54581a77d9.webp",
                 commentCount: 15,
@@ -142,7 +140,7 @@ const App = () => {
               },
               {
                 title: "Chill Sessions",
-                description: "Some description",
+                djName: "DJ Chill",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/04/bang-bang-beats-67efdd36651b7-300x300.webp",
                 commentCount: 5,
@@ -151,7 +149,7 @@ const App = () => {
               },
               {
                 title: "Party Anthems",
-                description: "Some description",
+                djName: "DJ Party",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/02/cover-beats-67af234bcccb2.webp",
                 commentCount: 20,
@@ -160,71 +158,18 @@ const App = () => {
               },
               {
                 title: "Deep House",
-                description: "Some description",
+                djName: "DJ Deep",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp",
                 commentCount: 10,
                 playCount: 1000,
                 likeCount: 400,
               },
-              {
-                title: "Electro House",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a20d03995f3.webp",
-                commentCount: 7,
-                playCount: 700,
-                likeCount: 250,
-              },
-              {
-                title: "Trance Mix",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2024/10/cover-6711fd5b34abf.webp",
-                commentCount: 18,
-                playCount: 1800,
-                likeCount: 900,
-              },
-              {
-                title: "Hip Hop Hits",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2024/10/MIXTAPES-1-1.jpg",
-                commentCount: 9,
-                playCount: 900,
-                likeCount: 350,
-              },
-              {
-                title: "Rock Anthems",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/station/dance-hall-after-beach-party-mixtape/",
-                commentCount: 11,
-                playCount: 1100,
-                likeCount: 450,
-              },
-              {
-                title: "Pop Hits",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-21-at-2.27.16-PM.jpeg",
-                commentCount: 6,
-                playCount: 600,
-                likeCount: 220,
-              },
-              {
-                title: "Retro Mix",
-                description: "Some description",
-                image: "https://picsum.photos/200/300?random=12",
-                commentCount: 14,
-                playCount: 1400,
-                likeCount: 600,
-              },
             ].map((mix, index) => (
               <MixCard
                 key={index}
                 title={mix.title}
-                description={mix.description}
+                djName={mix.djName}
                 image={mix.image}
                 commentCount={mix.commentCount}
                 playCount={mix.playCount}
@@ -244,7 +189,7 @@ const App = () => {
             {[
               {
                 title: "BANG BANG 4",
-                description: "Some description",
+                djName: "DJ Bang Bang",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-67dd70350f2f8-2048x2048.jpg",
                 commentCount: 12,
@@ -253,7 +198,7 @@ const App = () => {
               },
               {
                 title: "Summer Vibes",
-                description: "Some description",
+                djName: "DJ Summer",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-comp-67e6718ddd20c.webp",
                 commentCount: 8,
@@ -262,7 +207,7 @@ const App = () => {
               },
               {
                 title: "Night Beats",
-                description: "Some description",
+                djName: "DJ Night",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/03/crush-reggae-mixtape-comp-67e54581a77d9.webp",
                 commentCount: 15,
@@ -271,7 +216,7 @@ const App = () => {
               },
               {
                 title: "Chill Sessions",
-                description: "Some description",
+                djName: "DJ Chill",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/04/bang-bang-beats-67efdd36651b7-300x300.webp",
                 commentCount: 5,
@@ -280,7 +225,7 @@ const App = () => {
               },
               {
                 title: "Party Anthems",
-                description: "Some description",
+                djName: "DJ Party",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/02/cover-beats-67af234bcccb2.webp",
                 commentCount: 20,
@@ -289,55 +234,18 @@ const App = () => {
               },
               {
                 title: "Deep House",
-                description: "Some description",
+                djName: "DJ Deep",
                 image:
                   "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp",
                 commentCount: 10,
                 playCount: 1000,
                 likeCount: 400,
               },
-              {
-                title: "Electro House",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a20d03995f3.webp",
-                commentCount: 7,
-                playCount: 700,
-                likeCount: 250,
-              },
-              {
-                title: "Trance Mix",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2024/10/cover-6711fd5b34abf.webp",
-                commentCount: 18,
-                playCount: 1800,
-                likeCount: 900,
-              },
-              {
-                title: "Hip Hop Hits",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2024/10/MIXTAPES-1-1.jpg",
-                commentCount: 9,
-                playCount: 900,
-                likeCount: 350,
-              },
-
-              {
-                title: "Pop Hits",
-                description: "Some description",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2021/12/WhatsApp-Image-2021-12-21-at-2.27.16-PM.jpeg",
-                commentCount: 6,
-                playCount: 600,
-                likeCount: 220,
-              },
             ].map((mix, index) => (
               <HorizontalMixCard
                 key={index}
                 title={mix.title}
-                description={mix.description}
+                description={mix.djName}
                 image={mix.image}
                 commentCount={mix.commentCount}
                 playCount={mix.playCount}
@@ -351,18 +259,11 @@ const App = () => {
 
         {/* footer */}
         <AudioPlayer />
-        {/* <div className="w-full p-10 border-t border-white/5">
-          <p className="text-sm text-white/60 text-center">
-            &copy; 2025 Real DJs. All rights reserved.
-          </p>
-        </div> */}
       </div>
 
       {/* right */}
       <RightSidebar />
       {/* end right */}
-
-      {/* <AudioPlayer /> */}
     </div>
   );
 };

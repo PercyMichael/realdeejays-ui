@@ -3,7 +3,7 @@ import { FaComment, FaPlay, FaHeart } from "react-icons/fa";
 
 const MixCard = ({
   title,
-  description,
+  djName,
   onPlay,
   image,
   commentCount = 0,
@@ -25,18 +25,18 @@ const MixCard = ({
         </div>
       </div>
       <div className="p-4 flex flex-col flex-1 space-y-1.5">
-        <h3 className="text-sm">{title}</h3>
-        <p className="text-white/25 text-xs flex-1">{description}</p>
+        <h3 className="text-sm cursor-pointer">{title}</h3>
+        <p className="text-white/25 text-xs flex-1">{djName}</p>
         <div className="flex justify-between mt-4 text-white/25 text-xs">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaComment size={12} />
             <span>{commentCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaPlay size={12} />
             <span>{playCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaHeart size={12} />
             <span>{likeCount}</span>
           </div>
