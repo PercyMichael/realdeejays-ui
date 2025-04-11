@@ -44,7 +44,7 @@ const App = () => {
 
         {/* dj profiles */}
         <div className="w-full p-10">
-          <h1 className="text-xl">Top DJs</h1>
+          <h1 className="text-xl">Real DJs</h1>
           <p className="text-sm mt-1 text-white/60">
             Discover and follow your favorite DJs.
           </p>
