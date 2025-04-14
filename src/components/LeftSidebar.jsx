@@ -12,7 +12,10 @@ const LeftSidebar = () => {
     <div className="flex flex-col px-5 py-5 gap-10 w-1/6 h-screen">
       {/* search */}
       <div className="px-3 flex items-center border border-white/10 bg-black font-light text-sm rounded-full">
-        <GoSearch size={20} className="min-w-[25px] min-h-[20px]" />
+        <GoSearch
+          size={20}
+          className="min-w-[25px] min-h-[20px] text-white/40"
+        />
         <input
           type="text"
           placeholder="Search"

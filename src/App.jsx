@@ -9,6 +9,9 @@ import DJProfileCard from "./components/DJProfileCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import djsData from "./json/djs.json";
+import latestMixesData from "./json/latestMixes.json";
+import communityMixesData from "./json/communityMixes.json";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,38 +61,7 @@ const App = () => {
             autoplay={true}
             autoplaySpeed={3000}
           >
-            {[
-              {
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-67dd70350f2f8-2048x2048.jpg",
-                followerCount: 1200,
-                mixesCount: 50,
-              },
-              {
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-comp-67e6718ddd20c.webp",
-                followerCount: 800,
-                mixesCount: 30,
-              },
-              {
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/04/bang-bang-beats-67efdd36651b7-300x300.webp",
-                followerCount: 500,
-                mixesCount: 20,
-              },
-              {
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/cover-beats-67af234bcccb2.webp",
-                followerCount: 2000,
-                mixesCount: 100,
-              },
-              {
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp",
-                followerCount: 1000,
-                mixesCount: 40,
-              },
-            ].map((dj, index) => (
+            {djsData.map((dj, index) => (
               <DJProfileCard
                 key={index}
                 image={dj.image}
@@ -110,62 +82,7 @@ const App = () => {
             Greatest DJ mixes curated just for you.
           </p>
           <div className="grid grid-cols-3 gap-6 w-full py-8">
-            {[
-              {
-                title: "BANG BANG 4",
-                djName: "DJ Bang Bang",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-67dd70350f2f8-2048x2048.jpg",
-                commentCount: 12,
-                playCount: 1200,
-                likeCount: 500,
-              },
-              {
-                title: "Summer Vibes",
-                djName: "DJ Summer",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-comp-67e6718ddd20c.webp",
-                commentCount: 8,
-                playCount: 800,
-                likeCount: 300,
-              },
-              {
-                title: "Night Beats",
-                djName: "DJ Night",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/crush-reggae-mixtape-comp-67e54581a77d9.webp",
-                commentCount: 15,
-                playCount: 1500,
-                likeCount: 700,
-              },
-              {
-                title: "Chill Sessions",
-                djName: "DJ Chill",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/04/bang-bang-beats-67efdd36651b7-300x300.webp",
-                commentCount: 5,
-                playCount: 500,
-                likeCount: 200,
-              },
-              {
-                title: "Party Anthems",
-                djName: "DJ Party",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/cover-beats-67af234bcccb2.webp",
-                commentCount: 20,
-                playCount: 2000,
-                likeCount: 1000,
-              },
-              {
-                title: "Deep House",
-                djName: "DJ Deep",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp",
-                commentCount: 10,
-                playCount: 1000,
-                likeCount: 400,
-              },
-            ].map((mix, index) => (
+            {latestMixesData.map((mix, index) => (
               <MixCard
                 key={index}
                 title={mix.title}
@@ -186,62 +103,7 @@ const App = () => {
           </p>
 
           <div className="grid grid-cols-2 gap-6 w-full py-8">
-            {[
-              {
-                title: "BANG BANG 4",
-                djName: "DJ Bang Bang",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-67dd70350f2f8-2048x2048.jpg",
-                commentCount: 12,
-                playCount: 1200,
-                likeCount: 500,
-              },
-              {
-                title: "Summer Vibes",
-                djName: "DJ Summer",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/bang-bang-beats-comp-67e6718ddd20c.webp",
-                commentCount: 8,
-                playCount: 800,
-                likeCount: 300,
-              },
-              {
-                title: "Night Beats",
-                djName: "DJ Night",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/03/crush-reggae-mixtape-comp-67e54581a77d9.webp",
-                commentCount: 15,
-                playCount: 1500,
-                likeCount: 700,
-              },
-              {
-                title: "Chill Sessions",
-                djName: "DJ Chill",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/04/bang-bang-beats-67efdd36651b7-300x300.webp",
-                commentCount: 5,
-                playCount: 500,
-                likeCount: 200,
-              },
-              {
-                title: "Party Anthems",
-                djName: "DJ Party",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/cover-beats-67af234bcccb2.webp",
-                commentCount: 20,
-                playCount: 2000,
-                likeCount: 1000,
-              },
-              {
-                title: "Deep House",
-                djName: "DJ Deep",
-                image:
-                  "https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp",
-                commentCount: 10,
-                playCount: 1000,
-                likeCount: 400,
-              },
-            ].map((mix, index) => (
+            {communityMixesData.map((mix, index) => (
               <HorizontalMixCard
                 key={index}
                 title={mix.title}
