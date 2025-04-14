@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
   if (preloader && root) {
     preloader.style.display = "none";
     root.style.display = "block";
-    document.body.style.backgroundImage = "url('./public/bg.webp')";
+    document.body.style.backgroundImage = "url('/bg.webp')";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
