@@ -1,13 +1,22 @@
 import React from "react";
 import { PiUsersDuotone, PiMusicNoteDuotone } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
-const DJProfileCard = ({ image, followerCount, mixesCount, onFollow }) => {
+const DJProfileCard = ({
+  image,
+  followerCount,
+  mixesCount,
+  onFollow,
+  index,
+}) => {
   return (
     <div className="flex flex-col items-center w-24 group">
-      <div
-        className="w-24 h-24 bg-cover bg-center rounded-full group-hover:border-1 group-hover:border-[#C91F4F]"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
+      <Link to={`/dj/${index}`} key={index}>
+        <div
+          className="w-24 h-24 bg-cover bg-center rounded-full group-hover:border-1 group-hover:border-[#C91F4F]"
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      </Link>
 
       <div className="mt-2 text-xs font-light text-white/60 flex gap-2 items-center">
         <div className="flex items-center gap-1">

@@ -56,7 +56,7 @@ const AudioPlayer = () => {
   }, []);
 
   return (
-    <div className="w-full sticky top-0 z-10 bottom-0 backdrop-blur-3xl bg-black/80 border-t border-white/5 px-4 py-3 flex items-center gap-4">
+    <div className="w-full sticky z-10 bottom-0 backdrop-blur-3xl bg-black/80 border-t border-white/5 px-4 py-3 flex items-center gap-4">
       {/* Hidden audio element */}
       <audio
         ref={audioRef}

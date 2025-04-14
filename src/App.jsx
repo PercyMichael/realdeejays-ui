@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import djsData from "./json/djs.json";
 import latestMixesData from "./json/latestMixes.json";
 import communityMixesData from "./json/communityMixes.json";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,6 +65,7 @@ const App = () => {
             {djsData.map((dj, index) => (
               <DJProfileCard
                 key={index}
+                index={index}
                 image={dj.image}
                 followerCount={dj.followerCount}
                 mixesCount={dj.mixesCount}

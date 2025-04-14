@@ -6,6 +6,7 @@ import { GoHeart, GoHomeFill, GoSearch } from "react-icons/go";
 import { IoHeadsetOutline } from "react-icons/io5";
 import { PiMusicNoteDuotone } from "react-icons/pi";
 import { TiHeartOutline } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const LeftSidebar = () => {
   return (
@@ -27,8 +28,8 @@ const LeftSidebar = () => {
 
       <ul className="flex flex-col gap-8">
         <li>
-          <a
-            href="#"
+          <Link
+            to={"/"}
             className="text-lg text-white/40 hover:text-white transition-all duration-300 ease-in-out flex items-center gap-x-3"
           >
             <GoHomeFill
@@ -38,7 +39,7 @@ const LeftSidebar = () => {
             <p className="transition-transform duration-300 ease-in-out">
               Home
             </p>
-          </a>
+          </Link>
         </li>
 
         <li>

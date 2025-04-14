@@ -2,10 +2,21 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DJPage from "./pages/DJPage.jsx";
+import MixPage from "./pages/MixPage.jsx";
+import PageNotFound from "./pages/PageNotFound.jsx";
+
+const router = createBrowserRouter([
+  { path: "/", element: <App /> },
+  { path: "/dj/:id", element: <DJPage /> },
+  { path: "/mix/:id", element: <MixPage /> },
+  { path: "*", element: <PageNotFound /> }, // Catch-all route
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );
 
