@@ -16,5 +16,8 @@ window.addEventListener("load", () => {
     preloader.style.display = "none";
     root.style.display = "block";
     document.body.style.backgroundImage = "url('./public/bg.webp')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
   }
 });
