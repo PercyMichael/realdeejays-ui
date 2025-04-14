@@ -8,7 +8,7 @@ const ProfileSection = () => {
         <div className="w-6 h-6 bg-gray-300 rounded-full border border-white/20"></div>
         <span className="text-sm font-light">Username</span>
       </div>
-      <FaChevronDown size={15} className="text-white/60" />
+      <FaChevronDown size={15 } className="text-white/60" />
     </div>
   );
 };
