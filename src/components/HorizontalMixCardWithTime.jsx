@@ -14,7 +14,7 @@ const HorizontalMixCardWithTime = ({
   return (
     <div className="flex flex-row w-full border-0 items-center group">
       <div
-        className="w-16 h-16 bg-cover bg-center rounded-lg"
+        className="min-w-16 w-16 h-16 bg-cover bg-center rounded-lg"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div
@@ -24,7 +24,7 @@ const HorizontalMixCardWithTime = ({
           <FaPlay color="white" />
         </div>
       </div>
-      <div className="p-2 flex flex-col flex-1 justify-center space-y-1">
+      <div className="p-2 flex flex-col flex-1 justify-center space-y-1 min-w-[150px]">
         <h3 className="text-sm cursor-pointer">{title}</h3>
         <div className="flex space-x-2 items-center">
           <p className="text-white/25 text-xs">{author}</p>
