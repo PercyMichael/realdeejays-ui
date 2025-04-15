@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 
-import DJProfileCard from "../components/DJProfileCard";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import djsData from "../json/djs.json";
-import latestMixesData from "../json/latestMixes.json";
+
 import communityMixesData from "../json/communityMixes.json";
-import MixCard from "../components/MixCard";
-import HorizontalMixCardWithTime from "../components/HorizontalMixCardWithTime";
+
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
 import Header from "../components/Header";
 import AudioPlayer from "../components/AudioPlayer";
+import HorizontalMixCard from "../components/HorizontalMixCard";
+import DJProfileHeader from "../components/DJProfileHeader";
 
 const DJPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,53 +24,52 @@ const DJPage = () => {
   };
 
   return (
-    <div
-      className="bg-black/60 text-white min-h-screen flex items-stretch justify-center backdrop-blur-2xl"
-      style={{
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="bg-black/60 text-white min-h-screen flex items-stretch justify-center backdrop-blur-2xl">
       {/* left */}
       <LeftSidebar />
       {/* end left */}
 
       {/* middle */}
-      <div
-        className="flex flex-col items-center border border-x border-white/5 w-4xl min-h-screen bg-red-500 overflow-y-auto no-scrollbar"
-        onScroll={handleScroll}
-      >
-        {/* header */}
+      <div className="flex flex-col w-4xl h-screen">
         <Header isScrolled={isScrolled} />
-        {/* end header */}
 
-        {/* end jd profiles */}
+        <div
+          className="flex flex-col items-center border border-x border-white/5 overflow-y-auto no-scrollbar flex-1"
+          onScroll={handleScroll}
+        >
+          <DJProfileHeader
+            image="https://realdeejays.com/wp-content/uploads/2025/02/new-mix-2-67a9be4dd55fa.webp"
+            name="DJ Name"
+            followerCount={1000}
+            mixCount={50}
+            favouritesCount={200}
+          />
 
-        {/* content */}
-        <div className="flex flex-col justify-start w-full p-10">
-          <h1 className="text-xl mt-8">Community Mixes</h1>
-          <p className="text-sm mt-1 text-white/60">
-            Mixes submitted by our community members.
-          </p>
+          {/* content */}
+          <div className="flex flex-col justify-start w-full p-10">
+            <h1 className="text-xl font-semibold text-white">My Mixes</h1>
+            <p className="text-sm mt-1 text-white/60">
+              Discover fresh and updated mixes from DJ Name.
+            </p>
 
-          <div className="grid grid-cols-2 gap-6 w-full py-8">
-            {communityMixesData.map((mix, index) => (
-              <HorizontalMixCardWithTime
-                key={index}
-                title={mix.title}
-                description={mix.djName}
-                image={mix.image}
-                commentCount={mix.commentCount}
-                playCount={mix.playCount}
-                likeCount={mix.likeCount}
-                onPlay={() => console.log(`Play clicked for ${mix.title}`)}
-              />
-            ))}
+            <div className="grid grid-cols-2 gap-6 w-full py-8">
+              {communityMixesData.map((mix, index) => (
+                <HorizontalMixCard
+                  key={index}
+                  title={mix.title}
+                  description={mix.djName}
+                  image={mix.image}
+                  commentCount={mix.commentCount}
+                  playCount={mix.playCount}
+                  likeCount={mix.likeCount}
+                  onPlay={() => console.log(`Play clicked for ${mix.title}`)}
+                />
+              ))}
+            </div>
           </div>
+          {/* end content */}
         </div>
-        {/* end content */}
 
-        {/* footer */}
         <AudioPlayer />
       </div>
 

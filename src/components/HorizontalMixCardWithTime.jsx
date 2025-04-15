@@ -1,7 +1,9 @@
 import React from "react";
 import { FaComment, FaPlay, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HorizontalMixCardWithTime = ({
+  index,
   title,
   author,
   onPlay,
@@ -13,21 +15,27 @@ const HorizontalMixCardWithTime = ({
 }) => {
   return (
     <div className="flex flex-row w-full border-0 items-center group">
-      <div
-        className="min-w-16 w-16 h-16 bg-cover bg-center rounded-lg"
-        style={{ backgroundImage: `url(${image})` }}
-      >
+      <Link to={`/mix/${index}`} key={index}>
         <div
-          className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full cursor-pointer"
-          onClick={onPlay}
+          className="min-w-16 w-16 h-16 bg-cover bg-center rounded-lg"
+          style={{ backgroundImage: `url(${image})` }}
         >
-          <FaPlay color="white" />
+          <div
+            className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full cursor-pointer"
+            onClick={onPlay}
+          >
+            <FaPlay color="white" />
+          </div>
         </div>
-      </div>
+      </Link>
       <div className="p-2 flex flex-col flex-1 justify-center space-y-1 min-w-[150px]">
-        <h3 className="text-sm cursor-pointer">{title}</h3>
+        <Link to={`/mix/${index}`} key={index}>
+          <h3 className="text-sm cursor-pointer">{title}</h3>
+        </Link>
         <div className="flex space-x-2 items-center">
-          <p className="text-white/25 text-xs">{author}</p>
+          <Link to={`/dj/${index}`} key={index}>
+            <p className="text-white/25 text-xs">{author}</p>
+          </Link>
           <span className="text-white/25 text-xs">&#8226;</span>
           <p className="text-white/20 text-xs">{publishedTime}</p>
         </div>

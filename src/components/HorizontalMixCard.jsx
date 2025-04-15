@@ -1,7 +1,9 @@
 import React from "react";
 import { FaComment, FaPlay, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HorizontalMixCard = ({
+  index,
   title,
   description,
   onPlay,
@@ -12,23 +14,29 @@ const HorizontalMixCard = ({
 }) => {
   return (
     <div className="flex flex-row w-full border border-white/5 rounded-lg group">
-      <div
-        className="w-25 h-25 bg-cover bg-center rounded-l-lg relative"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
-      <div className="p-2 flex flex-col flex-1 justify-center">
-        <h3 className="text-xs">{title}</h3>
-        <p className="text-white/25 text-xs">{description}</p>
-        <div className="flex justify-between mt-2 text-white/25 text-xs">
-          <div className="flex items-center gap-1">
+      <Link to={`/mix/${index}`} key={index}>
+        <div
+          className="w-25 h-25 bg-cover bg-center rounded-l-lg relative"
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      </Link>
+      <div className="p-2 flex flex-col flex-1 justify-center gap-2">
+        <Link to={`/mix/${index}`} key={index}>
+          <h3 className="text-xs">{title}</h3>
+        </Link>
+        <Link to={`/dj/${index}`} key={index}>
+          <p className="text-white/25 text-xs">{description}</p>
+        </Link>
+        <div className="flex justify-between text-white/25 text-xs">
+          <div className="flex items-center gap-1  cursor-pointer">
             <FaComment size={10} />
             <span>{commentCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1  cursor-pointer">
             <FaPlay size={10} />
             <span>{playCount}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 cursor-pointer">
             <FaHeart size={10} />
             <span>{likeCount}</span>
           </div>
