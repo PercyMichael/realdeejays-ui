@@ -56,9 +56,10 @@ const App = () => {
               dots={true}
               infinite={true}
               speed={500}
-              slidesToShow={3}
+              slidesToShow={5}
               slidesToScroll={3}
-              arrows={false}
+              arrows={true}
+              dotsClass="slick-dots slick-thumb"
               responsive={[
                 {
                   breakpoint: 768,
@@ -66,6 +67,8 @@ const App = () => {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     arrows: false,
+                    infinite: true,
+                    dots: true,
                     dotsClass: "slick-dots slick-thumb",
                   },
                 },
