@@ -20,7 +20,7 @@ const DJProfileHeader = ({
         <div className="flex items-center gap-2 justify-between">
           <h2 className="text-lg font-bold">{name}</h2>
           <button
-            className="px-4 flex items-center gap-1 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
+            className="hidden md:flex px-4  items-center gap-1 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
             onClick={onFollow}
           >
             <FaUser size={14} />
@@ -44,6 +44,13 @@ const DJProfileHeader = ({
             <span>{favouritesCount}</span>
           </div>
         </div>
+        <button
+          className="flex md:hidden px-4 mt-4 items-center gap-1 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
+          onClick={onFollow}
+        >
+          <FaUser size={14} />
+          Follow
+        </button>
       </div>
     </div>
   );
