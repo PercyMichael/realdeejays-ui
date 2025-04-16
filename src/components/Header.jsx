@@ -1,4 +1,5 @@
 import React from "react";
+import { ImMenu2 } from "react-icons/im";
 import { Link } from "react-router-dom";
 
 const Header = ({ isScrolled }) => {
@@ -15,6 +16,9 @@ const Header = ({ isScrolled }) => {
           width={150}
         />
       </Link>
+
+      {/* added a menu */}
+      <ImMenu2 size={30} className="flex md:hidden" />
     </div>
   );
 };
