@@ -28,15 +28,15 @@ const HorizontalMixCard = ({
           <p className="text-white/25 text-xs">{description}</p>
         </Link>
         <div className="flex justify-between text-white/25 text-xs">
-          <div className="flex items-center gap-1  cursor-pointer">
+          <div className="flex items-center gap-1  cursor-pointer hover:text-[#C91F4F]">
             <FaComment size={10} />
             <span>{commentCount}</span>
           </div>
-          <div className="flex items-center gap-1  cursor-pointer">
+          <div className="flex items-center gap-1  cursor-pointer hover:text-[#C91F4F]">
             <FaPlay size={10} />
             <span>{playCount}</span>
           </div>
-          <div className="flex items-center gap-1 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer hover:text-[#C91F4F]">
             <FaHeart size={10} />
             <span>{likeCount}</span>
           </div>

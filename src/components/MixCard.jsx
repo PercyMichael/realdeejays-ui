@@ -40,15 +40,15 @@ const MixCard = ({
           <p className="text-white/25 text-xs flex-1">{djName}</p>
         </Link>
         <div className="flex justify-between mt-4 text-white/25 text-xs">
-          <div className="flex items-center gap-1 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer hover:text-[#C91F4F]">
             <FaComment size={12} />
             <span>{commentCount}</span>
           </div>
-          <div className="flex items-center gap-1 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer hover:text-[#C91F4F]">
             <FaPlay size={12} />
             <span>{playCount}</span>
           </div>
-          <div className="flex items-center gap-1 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer hover:text-[#C91F4F]">
             <FaHeart size={12} />
             <span>{likeCount}</span>
           </div>

@@ -23,6 +23,7 @@ const DJProfileHeader = ({
             className="px-4 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
             onClick={onFollow}
           >
+            <FaPlay size={14} />
             Follow
           </button>
         </div>
