@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUsers, FaMusic, FaHeart } from "react-icons/fa";
+import { FaUsers, FaMusic, FaHeart, FaPlay } from "react-icons/fa";
 
 const DJProfileHeader = ({
   image,
