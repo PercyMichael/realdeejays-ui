@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUsers, FaMusic, FaHeart, FaPlay } from "react-icons/fa";
+import { FaUsers, FaMusic, FaHeart, FaPlay, FaUser } from "react-icons/fa";
 
 const DJProfileHeader = ({
   image,
@@ -10,7 +10,7 @@ const DJProfileHeader = ({
   onFollow,
 }) => {
   return (
-    <div className="flex items-center p-10 border-b border-white/10 w-full gap-5">
+    <div className="flex items-center p-5 md:p-10 border-b border-white/10 w-full gap-5">
       <img
         src={image}
         alt={name}
@@ -20,10 +20,10 @@ const DJProfileHeader = ({
         <div className="flex items-center gap-2 justify-between">
           <h2 className="text-lg font-bold">{name}</h2>
           <button
-            className="px-4 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
+            className="px-4 flex items-center gap-1 py-2 text-sm font-extralight bg-white/10 rounded-full cursor-pointer hover:bg-[#C91F4F]"
             onClick={onFollow}
           >
-            <FaPlay size={14} />
+            <FaUser size={14} />
             Follow
           </button>
         </div>
