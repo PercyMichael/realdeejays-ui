@@ -13,6 +13,7 @@ import HorizontalMixCard from "../components/HorizontalMixCard";
 import DJProfileHeader from "../components/DJProfileHeader";
 import MixHeader from "../components/MixHeader";
 import CommentSidebar from "../components/CommentSidebar";
+import MobileComments from "../components/MobileComments";
 
 const MixPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,8 +49,19 @@ const MixPage = () => {
             onPlay={() => console.log("Mix played")}
           />
 
+          {/* mix info */}
+          <div className="flex flex-col justify-start w-full p-5 md:p-10 border-b border-white/10">
+            <h1 className="text-xl font-bold text-white">My Awesome Mix</h1>
+            <p className="text-sm text-white/60">By DJ Name</p>
+          </div>
+          {/* end mix info */}
+
+          {/* comments */}
+          <MobileComments />
+          {/* end comments */}
+
           {/* content */}
-          <div className="flex flex-col justify-start w-full p-10">
+          <div className="flex flex-col justify-start w-full p-5 md:p-10">
             <h1 className="text-xl font-semibold text-white">
               You may also like
             </h1>
@@ -57,7 +69,7 @@ const MixPage = () => {
               Other fresh and updated mixes from DJ Name.
             </p>
 
-            <div className="grid grid-cols-2 gap-6 w-full py-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full py-8">
               {communityMixesData.map((mix, index) => (
                 <HorizontalMixCard
                   key={index}
@@ -75,7 +87,7 @@ const MixPage = () => {
           {/* end content */}
         </div>
 
-        <AudioPlayer />
+        {/* <AudioPlayer /> */}
       </div>
 
       {/* right */}
