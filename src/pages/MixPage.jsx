@@ -88,7 +88,7 @@ const MixPage = () => {
         </div>
 
         {/* <AudioPlayer /> */}
-        <div className="flex items-start px-5 w-full gap-2 py-4 sticky bottom-0 bg-black/30 backdrop-blur-lg">
+        <div className="flex items-start px-5 w-full gap-2 py-4 sticky bottom-0 bg-black/90 backdrop-blur-lg">
           <textarea
             placeholder="Add a comment..."
             className="px-3 py-2 w-full text-sm bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-[#C91F4F] resize-none overflow-auto max-h-24 min-h-[2.5rem]"
