@@ -11,10 +11,9 @@ const MixCard = ({
   commentCount = 0,
   playCount = 0,
   likeCount = 0,
-  className = "",
 }) => {
   return (
-    <div className={`border-1 border-white/5 rounded-lg w-full ${className}`}>
+    <div className={`border-1 border-white/5 rounded-lg w-full`}>
       <Link to={`/mix/${index}`} key={index}>
         <div
           className="w-full aspect-square bg-pink-100/10 rounded-t-lg bg-cover bg-center relative group"

@@ -38,7 +38,7 @@ const App = () => {
       {/* end left */}
 
       {/* middle */}
-      <div className="flex flex-col w-4xl h-screen">
+      <div className="flex flex-col w-full md:max-w-4xl h-screen">
         <Header isScrolled={isScrolled} />
 
         <div
@@ -82,7 +82,7 @@ const App = () => {
             <p className="text-sm mt-1 text-white/60">
               Greatest DJ mixes curated just for you.
             </p>
-            <div className="grid grid-cols-3 gap-6 w-full py-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full py-8">
               {latestMixesData.map((mix, index) => (
                 <MixCard
                   key={index}

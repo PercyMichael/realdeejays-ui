@@ -234,7 +234,7 @@ const RightSidebar = () => {
   ];
 
   return (
-    <div className="flex flex-col px-5 py-5 gap-6 w-1/6 h-screen">
+    <div className="hidden md:flex flex-col px-5 py-5 gap-6 w-1/6 h-screen">
       <ProfileSection />
       <hr className="border-white/10" />
       {/* top mixes */}

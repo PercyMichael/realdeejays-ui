@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const LeftSidebar = () => {
   return (
-    <div className="flex flex-col px-5 py-5 gap-10 w-1/7 h-screen">
+    <div className="hidden md:flex flex-col px-5 py-5 gap-10 w-1/7 h-screen">
       {/* search */}
       <div className="px-3 flex items-center border border-white/10 bg-black font-light text-sm rounded-full">
         <GoSearch
