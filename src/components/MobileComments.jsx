@@ -66,7 +66,7 @@ const commentsData = [
 
 const MobileComments = () => {
   return (
-    <div className="flex flex-col pt-5 gap-4 w-full border-b max-h-11/12 border-white/10">
+    <div className="flex flex-col pt-5 gap-4 w-full border-b min-h-screen max-h-11/12 border-white/10">
       <h2 className="text-lg px-5 font-bold text-white sticky top-0 z-10 py-2 bg-black/90 backdrop-blur-lg">
         Comments ({commentsData.length})
       </h2>
