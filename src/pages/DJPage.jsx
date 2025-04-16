@@ -46,13 +46,13 @@ const DJPage = () => {
           />
 
           {/* content */}
-          <div className="flex flex-col justify-start w-full p-10">
+          <div className="flex flex-col justify-start w-full p-5 md:p-10">
             <h1 className="text-xl font-semibold text-white">My Mixes</h1>
             <p className="text-sm mt-1 text-white/60">
               Discover fresh and updated mixes from DJ Name.
             </p>
 
-            <div className="grid grid-cols-2 gap-6 w-full py-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full py-8">
               {communityMixesData.map((mix, index) => (
                 <HorizontalMixCard
                   key={index}
