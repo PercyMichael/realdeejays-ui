@@ -96,7 +96,7 @@ const App = () => {
           {/* end jd profiles */}
 
           {/* content */}
-          <div className="flex flex-col justify-start w-full p-10">
+          <div className="flex flex-col justify-start w-full px-5 md:px-10 py-10">
             {/* latest mixes */}
             <h1 className="text-xl">New Mixes</h1>
             <p className="text-sm mt-1 text-white/60">
@@ -118,7 +118,7 @@ const App = () => {
             </div>
             {/* end latest */}
 
-            <h1 className="text-xl mt-8">Community Mixes</h1>
+            {/* <h1 className="text-xl mt-8">Community Mixes</h1>
             <p className="text-sm mt-1 text-white/60">
               Mixes submitted by our community members.
             </p>
@@ -136,7 +136,7 @@ const App = () => {
                   onPlay={() => console.log(`Play clicked for ${mix.title}`)}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
           {/* end content */}
         </div>

@@ -18,7 +18,7 @@ const DJProfileCard = ({
         ></div>
       </Link>
 
-      <div className="mt-2 text-xs font-light text-white/60 flex gap-2 items-center">
+      <div className="mt-2 text-xs font-extralight  md:font-light text-white/60 flex gap-2 items-center">
         <div className="flex items-center gap-1">
           <PiUsersDuotone size={15} title={`${followerCount} Followers`} />
           <span className="text-white/80 transition-colors duration-300 group-hover:text-white">
