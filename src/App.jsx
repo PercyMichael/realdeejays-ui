@@ -46,7 +46,7 @@ const App = () => {
           onScroll={handleScroll}
         >
           {/* dj profiles */}
-          <div className="w-full p-10">
+          <div className="w-full px-5 md:px-10 py-10">
             <h1 className="text-xl">Top DJs</h1>
             <p className="text-sm mt-1 text-white/60">
               Discover and follow your favorite DJs.
@@ -56,8 +56,24 @@ const App = () => {
               dots={true}
               infinite={true}
               speed={500}
-              slidesToShow={5}
-              slidesToScroll={4}
+              slidesToShow={3}
+              slidesToScroll={3}
+              responsive={[
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                  },
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 4,
+                  },
+                },
+              ]}
               autoplay={true}
               autoplaySpeed={3000}
             >
