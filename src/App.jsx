@@ -102,7 +102,7 @@ const App = () => {
             <p className="text-sm mt-1 text-white/60">
               Greatest DJ mixes curated just for you.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mg:gap-6 w-full py-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mg:gap-6 w-full pt-8">
               {latestMixesData.map((mix, index) => (
                 <MixCard
                   key={index}
