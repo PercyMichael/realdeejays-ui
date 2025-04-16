@@ -31,14 +31,14 @@ const MixCard = ({
           </div>
         </div>
       </Link>
-      <div className="p-4 flex flex-col flex-1 space-y-1.5">
+      <div className="p-2.5 md:p-4 flex flex-col flex-1 space-y-1.5">
         <Link to={`/mix/${index}`} key={index}>
           <h3 className="text-sm cursor-pointer">{title}</h3>
         </Link>
         <Link to={`/dj/${index}`} key={index}>
           <p className="text-white/25 text-xs flex-1">{djName}</p>
         </Link>
-        <div className="flex justify-between mt-4 text-white/25 text-xs">
+        <div className="flex justify-between mt-2 md:mt-4 text-white/25 text-xs">
           <div className="flex items-center gap-1 cursor-pointer hover:text-[#C91F4F]">
             <FaComment size={12} />
             <span>{commentCount}</span>
